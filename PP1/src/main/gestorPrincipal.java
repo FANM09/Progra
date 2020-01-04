@@ -8,6 +8,8 @@ package main;
 import Controlador.ControladorLogin;
 import Modelo.Usuario;
 import Vista.VentanaLogin;
+import javax.mail.MessagingException;
+import mailer.Mail;
 
 /**
  *
@@ -15,7 +17,8 @@ import Vista.VentanaLogin;
  */
 public class gestorPrincipal {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MessagingException {
+        Mail.enviarCorreo();
         Usuario modelo = new Usuario();
         VentanaLogin vista = new VentanaLogin();
         //AgregarSalaForm vista2 = new AgregarSalaForm();
