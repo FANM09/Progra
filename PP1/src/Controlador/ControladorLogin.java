@@ -1,5 +1,5 @@
 package Controlador;
-
+import Controlador.ControladorMenuEstudiante;
 import Modelo.Usuario;
 import Vista.VentanaFuncionario;
 import Vista.VentanaRegistroUsuario;
@@ -67,6 +67,9 @@ public class ControladorLogin implements ActionListener {
                             controladorFuncionario.vista.setLocationRelativeTo(null);
                             break;
                         case 3:
+                            ControladorMenuEstudiante controlardorEstudiante = new ControladorMenuEstudiante();
+                            JOptionPane.showMessageDialog(vista, "Bienvenido: " + modelo.getNombreUsuario());
+                            vista.limpiarCampos();
                             break;
                         default:
                             break;
