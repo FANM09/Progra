@@ -38,7 +38,7 @@ public class ControladorFuncionarioDAO implements ActionListener {
                 añadirEstudiante();
                 break;
             case "Consultar Estudiante":
-                cerrarVentanaLogin();
+                
                 break;
             case "Agregar Sala":
                 agregarSala();
@@ -47,16 +47,16 @@ public class ControladorFuncionarioDAO implements ActionListener {
                 modificarSala();
                 break;
             case "Consultar Sala":
-                cerrarVentanaLogin();
+                
                 break;
             case "Análisis de datos":
-                cerrarVentanaLogin();
+                
                 break;
             case "Consultar Reserva":
-                cerrarVentanaLogin();
+                
                 break;
             case "Cancelar Reserva":
-                cerrarVentanaLogin();
+                
                 break;
             case "Salir":
                 cerrarVentanaFuncionario();
