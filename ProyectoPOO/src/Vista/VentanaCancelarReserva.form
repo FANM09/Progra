@@ -31,7 +31,11 @@
                       <Group type="102" attributes="0">
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField1" min="-2" pref="122" max="-2" attributes="0"/>
+                          <Component id="txtNomUsu" min="-2" pref="122" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="lbCarnet" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txtCarnet" min="-2" pref="128" max="-2" attributes="0"/>
                       </Group>
                       <Component id="btCancelarReserva" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
@@ -42,7 +46,7 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="lbIdSala" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtIdSala" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="txtHoraInicio" min="-2" pref="130" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane1" min="-2" pref="452" max="-2" attributes="0"/>
@@ -63,8 +67,10 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNomUsu" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbCarnet" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCarnet" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btVerReservas" min="-2" max="-2" attributes="0"/>
@@ -74,7 +80,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtIdReserva" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbReserva" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtIdSala" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtHoraInicio" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbIdSala" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -94,7 +100,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
+        <Component class="javax.swing.JTable" name="tablaReservas">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="5" rowCount="0">
@@ -152,7 +158,7 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="txtNomUsu">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -180,20 +186,30 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtIdSala">
+    <Component class="javax.swing.JTextField" name="txtHoraInicio">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbIdSala">
       <Properties>
-        <Property name="text" type="java.lang.String" value="idSala:"/>
+        <Property name="text" type="java.lang.String" value="horaInicio:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btAtras">
       <Properties>
         <Property name="text" type="java.lang.String" value="Atr&#xe1;s"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbCarnet">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="carnet:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCarnet">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>

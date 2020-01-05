@@ -28,20 +28,22 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaReservas = new javax.swing.JTable();
         btVerReservas = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txtNomUsu = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         txtIdReserva = new javax.swing.JTextField();
         lbReserva = new javax.swing.JLabel();
         btCancelarReserva = new javax.swing.JButton();
-        txtIdSala = new javax.swing.JTextField();
+        txtHoraInicio = new javax.swing.JTextField();
         lbIdSala = new javax.swing.JLabel();
         btAtras = new javax.swing.JButton();
+        lbCarnet = new javax.swing.JLabel();
+        txtCarnet = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaReservas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -57,13 +59,13 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
+        jScrollPane1.setViewportView(tablaReservas);
+        if (tablaReservas.getColumnModel().getColumnCount() > 0) {
+            tablaReservas.getColumnModel().getColumn(0).setResizable(false);
+            tablaReservas.getColumnModel().getColumn(1).setResizable(false);
+            tablaReservas.getColumnModel().getColumn(2).setResizable(false);
+            tablaReservas.getColumnModel().getColumn(3).setResizable(false);
+            tablaReservas.getColumnModel().getColumn(4).setResizable(false);
         }
 
         btVerReservas.setText("Ver reservas");
@@ -74,9 +76,11 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
 
         btCancelarReserva.setText("Cancelar Reserva");
 
-        lbIdSala.setText("idSala:");
+        lbIdSala.setText("horaInicio:");
 
         btAtras.setText("Atrás");
+
+        lbCarnet.setText("carnet:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,7 +94,11 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNomUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lbCarnet)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(btCancelarReserva)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -100,7 +108,7 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lbIdSala)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtIdSala, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtHoraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -114,8 +122,10 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(txtNomUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(lbCarnet)
+                    .addComponent(txtCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btVerReservas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -124,7 +134,7 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtIdReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbReserva)
-                    .addComponent(txtIdSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHoraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbIdSala))
                 .addGap(27, 27, 27)
                 .addComponent(btCancelarReserva)
@@ -177,11 +187,21 @@ public class VentanaCancelarReserva extends javax.swing.JFrame {
     public javax.swing.JButton btVerReservas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jTable1;
-    public javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lbCarnet;
     private javax.swing.JLabel lbIdSala;
     private javax.swing.JLabel lbReserva;
+    public javax.swing.JTable tablaReservas;
+    public javax.swing.JTextField txtCarnet;
+    public javax.swing.JTextField txtHoraInicio;
     public javax.swing.JTextField txtIdReserva;
-    public javax.swing.JTextField txtIdSala;
+    public javax.swing.JTextField txtNomUsu;
     // End of variables declaration//GEN-END:variables
+
+    public void cerrarVentana() {
+        this.dispose();
+    }
+
+    public boolean validarDatos() {
+        return !(txtCarnet.getText().equals("") || txtHoraInicio.getText().equals("") || txtIdReserva.getText().equals("") || txtNomUsu.getText().equals(""));
+    }
 }

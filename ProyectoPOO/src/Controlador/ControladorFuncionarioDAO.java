@@ -1,4 +1,5 @@
 package Controlador;
+
 import Controlador.ControladorConsultaReserva;
 import Modelo.Recurso;
 import Modelo.Sala;
@@ -38,7 +39,7 @@ public class ControladorFuncionarioDAO implements ActionListener {
                 añadirEstudiante();
                 break;
             case "Consultar Estudiante":
-                
+
                 break;
             case "Agregar Sala":
                 agregarSala();
@@ -47,17 +48,15 @@ public class ControladorFuncionarioDAO implements ActionListener {
                 modificarSala();
                 break;
             case "Consultar Sala":
-                
+                consultarSala();
                 break;
             case "Análisis de datos":
-                
+
                 break;
-            case "Consultar Reserva":
-                vista.setVisible(false);
-              ControladorConsultaReserva controladorConsultaReserva= new ControladorConsultaReserva();
+            case "Consultar Reserva":;
                 break;
             case "Cancelar Reserva":
-                
+
                 break;
             case "Salir":
                 cerrarVentanaFuncionario();
@@ -90,6 +89,12 @@ public class ControladorFuncionarioDAO implements ActionListener {
         ControladorModificarSalaDAO controladorModSala = new ControladorModificarSalaDAO(vistaModificacionSala, sala, recurso);
         controladorModSala.vista.setVisible(true);
         controladorModSala.vista.setLocationRelativeTo(null);
+    }
+
+    public void consultarSala() {
+        ControladorConsultaReserva controladorConsultaReserva = new ControladorConsultaReserva();
+        controladorConsultaReserva.vista.setVisible(true);
+        controladorConsultaReserva.vista.setLocationRelativeTo(null);
     }
 
     public void cerrarVentanaFuncionario() {
