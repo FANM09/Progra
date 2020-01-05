@@ -17,19 +17,19 @@ public class ControladorCancelarReservaDAO implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Ver reservas":
-                buscarSala();
+                //buscarSala();
                 break;
             case "Cancelar Reserva":
-                cerrarVentana();
+                //cerrarVentana();
                 break;
             case "Búsqueda Avanzada":
-                buscarSalaEspecifica();
+                //buscarSalaEspecifica();
                 break;
             case "Añadir Participante":
-                añadirParticipante();
+                //añadirParticipante();
                 break;
             case "Crear Reserva":
-                agregarReserva();
+                //agregarReserva();
                 break;
             default:
                 break;

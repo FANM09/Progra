@@ -1,5 +1,5 @@
 package Controlador;
-
+import Controlador.ControladorConsultaReserva;
 import Modelo.Recurso;
 import Modelo.Sala;
 import Modelo.Usuario;
@@ -38,7 +38,7 @@ public class ControladorFuncionarioDAO implements ActionListener {
                 añadirEstudiante();
                 break;
             case "Consultar Estudiante":
-                cerrarVentanaLogin();
+                
                 break;
             case "Agregar Sala":
                 agregarSala();
@@ -47,16 +47,17 @@ public class ControladorFuncionarioDAO implements ActionListener {
                 modificarSala();
                 break;
             case "Consultar Sala":
-                cerrarVentanaLogin();
+                
                 break;
             case "Análisis de datos":
-                cerrarVentanaLogin();
+                
                 break;
             case "Consultar Reserva":
-                cerrarVentanaLogin();
+                vista.setVisible(false);
+              ControladorConsultaReserva controladorConsultaReserva= new ControladorConsultaReserva();
                 break;
             case "Cancelar Reserva":
-                cerrarVentanaLogin();
+                
                 break;
             case "Salir":
                 cerrarVentanaFuncionario();
