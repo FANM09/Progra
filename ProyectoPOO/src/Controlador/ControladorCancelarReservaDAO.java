@@ -1,25 +1,25 @@
 package Controlador;
 
-import Modelo.Reserva;
 import Vista.VentanaCancelarReserva;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ControladorCancelarReservaDAO {
+public class ControladorCancelarReservaDAO implements ActionListener {
 
     public VentanaCancelarReserva vista;
 
     public ControladorCancelarReservaDAO(VentanaCancelarReserva pVista) {
         vista = pVista;
-        this.vista.bt.addActionListener(this);
-
+        this.vista.btCancelarReserva.addActionListener(this);
+        this.vista.btVerReservas.addActionListener(this);
     }
 
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "Buscar":
+            case "Ver reservas":
                 buscarSala();
                 break;
-            case "Atrás":
+            case "Cancelar Reserva":
                 cerrarVentana();
                 break;
             case "Búsqueda Avanzada":

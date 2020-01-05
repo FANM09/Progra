@@ -49,7 +49,8 @@ public class ControladorFuncionesEstudiante implements ActionListener {
     
     public void cancelarReserva(){
         VentanaCancelarReserva vista = new VentanaCancelarReserva();
-        ControladorCancelarReservaDAO controladorReserva = new ControladorCancelarReservaDAO();
-        controladorReserva.
+        ControladorCancelarReservaDAO controladorCancelarReserva = new ControladorCancelarReservaDAO(vista);
+        controladorCancelarReserva.vista.setVisible(true);
+        controladorCancelarReserva.vista.setLocationRelativeTo(null);
     }
 }
